@@ -1,0 +1,12 @@
+name: CD
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  uses: ./.github/workflows/ci.yml
+  cd:
+    runs-on: ubuntu-latest
+    steps:
+      - run: ls dist
