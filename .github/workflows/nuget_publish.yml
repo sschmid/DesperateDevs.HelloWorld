@@ -1,0 +1,17 @@
+name: Publish NuGet Packages
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  pack:
+    uses: sschmid/DotnetGitHubActions/.github/workflows/nuget_pack.yml@main
+  publish:
+    needs: pack
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/download-artifact@v3
+        with:
+          name: NuGet Packages
+      - run: tree
