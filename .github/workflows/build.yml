@@ -24,7 +24,7 @@ jobs:
       - name: "Test"
         run: dotnet test -c Release --no-build
 
-      - name: "Upload artifacts"
+      - name: "Upload Assemblies"
         uses: actions/upload-artifact@v3
         with:
           name: Assemblies
