@@ -31,7 +31,6 @@ jobs:
         run: dotnet publish -c Release --no-build -o dist/bin/Release
 
       - name: "Push to NuGet"
-             dotnet nuget push "dist/*.nupkg" --api-key YOUR_GITHUB_PAT --source "github"
         run: dotnet nuget push "dist/*.nupkg" --api-key "${GITHUB_TOKEN}" --skip-duplicate --source https://nuget.pkg.github.com/sschmid/index.json"
 
       - name: "Upload Assemblies"
