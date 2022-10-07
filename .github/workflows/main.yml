@@ -32,8 +32,10 @@ jobs:
 
       - name: "Push to NuGet"
         run: |
-          dotnet nuget add source --username sschmid --password ${{ secrets.GITHUB_TOKEN }} --store-password-in-clear-text --name github "https://nuget.pkg.github.com/sschmid/index.json"
-          dotnet nuget push "dist/*.nupkg" --api-key ${{ secrets.GITHUB_TOKEN }} --source github
+          dotnet nuget add source --username sschmid --password "${GITHUB_TOKEN}" --store-password-in-clear-text --name github "https://nuget.pkg.github.com/sschmid/index.json"
+          dotnet nuget push "dist/*.nupkg" --api-key "${GITHUB_TOKEN}" --source github
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: "Upload Artifact"
         uses: actions/upload-artifact@v3
