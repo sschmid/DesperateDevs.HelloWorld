@@ -5,7 +5,7 @@ on:
     branches: [ main ]
 
 jobs:
-  uses: ./.github/workflows/ci.yml
+  uses: sschmid/DotnetGitHubActions/.github/workflows/ci.yml@main
   cd:
     runs-on: ubuntu-latest
     steps:
