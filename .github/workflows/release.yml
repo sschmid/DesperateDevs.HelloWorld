@@ -1,18 +1,22 @@
-name: Release
+name: Publish NuGet Packages
 
 on:
   push:
     branches: [ main ]
 
 jobs:
-  publish:
-    uses: sschmid/DotnetGitHubActions/.github/workflows/nuget_publish.yml@main
-    env:
-      NUGET_API_KEY: ${{ secrets.NUGET_API_KEY }}
-  release:
-    needs: publish
+  pack:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/download-artifact@v3
+      - uses: actions/checkout@v3
         with:
-          name: NuGet Packages
+          submodules: 'recursive'
+      - uses: actions/setup-dotnet@v3
+        with:
+          dotnet-version: 6.0.x
+      - run: dotnet build -c Release
+      - run: dotnet test -c Release --no-build
+      - run: dotnet pack -c Release --no-build -o dist
+      - run: dotnet nuget push "dist/*.nupkg" --api-key "${NUGET_API_KEY}" --skip-duplicate --source https://api.nuget.org/v3/index.json
+        env:
+          NUGET_API_KEY: ${{ secrets.NUGET_API_KEY }}
