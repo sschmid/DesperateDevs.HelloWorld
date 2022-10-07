@@ -1,0 +1,12 @@
+name: Release
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  publish:
+    uses: sschmid/DotnetGitHubActions/.github/workflows/nuget_publish.yml@main
+  release:
+    needs: publish
+    runs-on: ubuntu-latest

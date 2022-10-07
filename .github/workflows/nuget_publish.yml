@@ -1,8 +1,7 @@
 name: Publish NuGet Packages
 
 on:
-  push:
-    branches: [ main ]
+  workflow_call:
 
 jobs:
   pack:
@@ -14,4 +13,6 @@ jobs:
       - uses: actions/download-artifact@v3
         with:
           name: NuGet Packages
-      - run: tree
+      - run: dotnet nuget push "*.nupkg" --api-key "${NUGET_API_KEY}" --skip-duplicate --source https://api.nuget.org/v3/index.json
+        env:
+          NUGET_API_KEY: ${{ secrets.NUGET_API_KEY }}
