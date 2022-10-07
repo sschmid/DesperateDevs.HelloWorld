@@ -1,14 +1,12 @@
 name: CI
 
 on:
-  push:
-    branches: [ main ]
   pull_request:
     branches: [ main ]
   workflow_call:
 
 jobs:
-  ci:
+  pack:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
@@ -21,3 +19,7 @@ jobs:
       - run: dotnet build -c Release --no-restore
       - run: dotnet test -c Release --no-build
       - run: dotnet pack -c Release -o dist
+      - uses: actions/upload-artifact@v3
+        with:
+          name: nuget
+          path: dist/*.nupkg
