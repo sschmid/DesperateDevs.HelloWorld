@@ -7,6 +7,8 @@ on:
 jobs:
   publish:
     uses: sschmid/DotnetGitHubActions/.github/workflows/nuget_publish.yml@main
+    env:
+      NUGET_API_KEY: ${{ secrets.NUGET_API_KEY }}
   release:
     needs: publish
     runs-on: ubuntu-latest
