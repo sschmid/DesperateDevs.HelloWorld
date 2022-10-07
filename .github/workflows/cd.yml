@@ -5,8 +5,8 @@ on:
     branches: [ main ]
 
 jobs:
-  uses: sschmid/DotnetGitHubActions/.github/workflows/ci.yml@main
   cd:
     runs-on: ubuntu-latest
+    uses: sschmid/DotnetGitHubActions/.github/workflows/ci.yml@main
     steps:
       - run: ls dist
