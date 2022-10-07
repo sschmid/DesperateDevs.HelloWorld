@@ -1,5 +1,5 @@
 ﻿Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotnetGitHubActions", "DotnetGitHubActions\DotnetGitHubActions.csproj", "{7D619E26-C436-4FB1-9881-DF7FE4230455}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DesperateDevs.HelloWorld", "DesperateDevs.HelloWorld\DesperateDevs.HelloWorld.csproj", "{7D619E26-C436-4FB1-9881-DF7FE4230455}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tests", "Tests\Tests.csproj", "{44DB346A-5F10-4BCB-BD2A-A2226C172FF7}"
 EndProject

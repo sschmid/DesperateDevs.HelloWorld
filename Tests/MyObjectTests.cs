@@ -1,4 +1,4 @@
-using DotnetGitHubActions;
+using DesperateDevs.HelloWorld;
 
 namespace Tests;
 
@@ -7,6 +7,6 @@ public class MyObjectTests
     [Fact]
     public void HasMyInt()
     {
-        Assert.Equal(420, new MyObject().MyInt);
+        Assert.Equal(42, new MyObject().MyInt);
     }
 }

@@ -1,4 +1,4 @@
-﻿namespace DotnetGitHubActions;
+﻿namespace DesperateDevs.HelloWorld;
 
 public class MyObject
 {
