@@ -7,7 +7,6 @@ on:
 jobs:
   ci:
     uses: sschmid/DotnetGitHubActions/.github/workflows/ci.yml@main
-
   cd:
     needs: ci
     runs-on: ubuntu-latest
