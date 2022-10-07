@@ -14,6 +14,4 @@ jobs:
       - uses: actions/download-artifact@v3
         with:
           name: nuget
-          path: path/to/artifact
-      - run: ls .
-      - run: ls dist
+      - run: tree
