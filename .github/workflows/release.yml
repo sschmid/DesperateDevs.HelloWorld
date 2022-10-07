@@ -1,11 +1,11 @@
-name: Publish NuGet Packages
+name: Release
 
 on:
   push:
     branches: [ main ]
 
 jobs:
-  pack:
+  release:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
