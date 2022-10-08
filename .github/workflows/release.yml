@@ -15,4 +15,8 @@ jobs:
           name: Packages
 
       - name: "Push to NuGet"
-        run: tree
+        run: |
+          dotnet nuget push "*.nupkg" \
+            --api-key ${{ secrets.NUGET_GITHUB_API_KEY }} \
+            --skip-duplicate \
+            --source https://nuget.pkg.github.com/sschmid/index.json
