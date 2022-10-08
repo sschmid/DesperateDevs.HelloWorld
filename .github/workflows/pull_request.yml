@@ -1,0 +1,9 @@
+name: Pull request
+
+on:
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+    uses: sschmid/DotnetGitHubActions/.github/workflows/build.yml@main

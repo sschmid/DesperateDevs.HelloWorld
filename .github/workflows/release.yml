@@ -1,0 +1,21 @@
+name: Release
+
+on: workflow_dispatch
+
+jobs:
+  build:
+    uses: sschmid/DotnetGitHubActions/.github/workflows/build.yml@main
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - name: "Download Packages"
+        uses: actions/download-artifact@v3
+        with:
+          name: Packages
+
+      - name: "Push to NuGet"
+        run: |
+          dotnet nuget push "dist/NuGet/*.nupkg" \
+            --api-key ${{ secrets.NUGET_GITHUB_API_KEY }} \
+            --skip-duplicate \
+            --source https://nuget.pkg.github.com/sschmid/index.json
