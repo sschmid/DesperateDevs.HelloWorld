@@ -38,5 +38,5 @@ jobs:
       - name: "Upload Artifact"
         uses: actions/upload-artifact@v3
         with:
-          name: ${{ github.repository }} Artifacts
+          name: ${{ github.repository.name }} Artifacts
           path: dist
