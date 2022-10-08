@@ -6,6 +6,7 @@ jobs:
   build:
     uses: sschmid/DotnetGitHubActions/.github/workflows/build.yml@main
   release:
+    needs: build
     runs-on: ubuntu-latest
     steps:
       - name: "Download Packages"
