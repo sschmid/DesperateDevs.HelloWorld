@@ -6,4 +6,4 @@ on:
 
 jobs:
   build:
-    uses: ${{ github.repository }}/.github/workflows/build.yml@main
+    uses: sschmid/DotnetGitHubActions/.github/workflows/build.yml@main
