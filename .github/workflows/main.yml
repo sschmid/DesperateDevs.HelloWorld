@@ -4,9 +4,6 @@ on:
   push:
     branches: [ main ]
 
-permissions:
-  packages: write
-
 jobs:
   release:
     runs-on: ubuntu-latest
@@ -35,13 +32,11 @@ jobs:
 
       - name: "Push to NuGet"
         run: |
-          dotnet nuget add source --username sschmid --password "${GITHUB_TOKEN}" --store-password-in-clear-text --name github "https://nuget.pkg.github.com/sschmid/index.json"
-          dotnet nuget push "dist/*.nupkg" --api-key "${GITHUB_TOKEN}" --source github
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          dotnet nuget add source --username sschmid --password ${{ secrets.NUGET_GITHUB_API_KEY }} --store-password-in-clear-text --name github "https://nuget.pkg.github.com/sschmid/index.json"
+          dotnet nuget push "dist/*.nupkg" --api-key ${{ secrets.NUGET_GITHUB_API_KEY }} --source github
 
       - name: "Upload Artifact"
         uses: actions/upload-artifact@v3
         with:
-          name: Artifacts
+          name: ${{ github.repository }} Artifacts
           path: dist
