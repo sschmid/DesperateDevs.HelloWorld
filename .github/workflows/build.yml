@@ -37,6 +37,12 @@ jobs:
           name: Coverage Report
           path: coveragereport
 
+      - name: "Upload to codecov"
+        uses: codecov/codecov-action@v3
+        with:
+          flags: unittests
+          fail_ci_if_error: false
+
       - name: "Upload Assemblies"
         uses: actions/upload-artifact@v3
         with:
