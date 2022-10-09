@@ -31,6 +31,12 @@ jobs:
       - name: "Pack"
         run: dotnet pack -c Release --no-build -o dist/NuGet
 
+      - name: "Upload Coverage Report"
+        uses: actions/upload-artifact@v3
+        with:
+          name: Coverage Report
+          path: coveragereport
+
       - name: "Upload Assemblies"
         uses: actions/upload-artifact@v3
         with:
