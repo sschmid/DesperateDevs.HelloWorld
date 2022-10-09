@@ -37,7 +37,7 @@ jobs:
           name: Coverage Report
           path: coveragereport
 
-      - name: "Upload to codecov"
+      - name: "Upload to Codecov"
         uses: codecov/codecov-action@v3
         with:
           flags: unittests
