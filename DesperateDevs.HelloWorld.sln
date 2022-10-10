@@ -1,7 +1,15 @@
 ﻿Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DesperateDevs.HelloWorld", "DesperateDevs.HelloWorld\DesperateDevs.HelloWorld.csproj", "{7D619E26-C436-4FB1-9881-DF7FE4230455}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DesperateDevs.HelloWorld", "DesperateDevs.HelloWorld", "{BAE6DF35-EB49-475B-9D8E-7EC3AB5BF4EF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tests", "Tests\Tests.csproj", "{44DB346A-5F10-4BCB-BD2A-A2226C172FF7}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DesperateDevs.HelloWorld", "src\DesperateDevs.HelloWorld\src\DesperateDevs.HelloWorld.csproj", "{3FDDCD82-68CA-4A62-86E3-8D8A692B14BC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DesperateDevs.HelloWorld.Tests", "src\DesperateDevs.HelloWorld\tests\DesperateDevs.HelloWorld.Tests.csproj", "{B7A033FF-F0CF-435F-BF7C-748A41AF7B1C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DesperateDevs.HelloWorld2", "DesperateDevs.HelloWorld2", "{8BAB2186-0D37-44DD-A818-9F57F2ABDD50}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DesperateDevs.HelloWorld2", "src\DesperateDevs.HelloWorld2\src\DesperateDevs.HelloWorld2.csproj", "{B1D3221A-9E03-4F44-A29F-9E171594CA57}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DesperateDevs.HelloWorld2.Tests", "src\DesperateDevs.HelloWorld2\tests\DesperateDevs.HelloWorld2.Tests.csproj", "{90753CF3-C381-4282-A24B-EF42DC442138}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -9,13 +17,27 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{7D619E26-C436-4FB1-9881-DF7FE4230455}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{7D619E26-C436-4FB1-9881-DF7FE4230455}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{7D619E26-C436-4FB1-9881-DF7FE4230455}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{7D619E26-C436-4FB1-9881-DF7FE4230455}.Release|Any CPU.Build.0 = Release|Any CPU
-		{44DB346A-5F10-4BCB-BD2A-A2226C172FF7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{44DB346A-5F10-4BCB-BD2A-A2226C172FF7}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{44DB346A-5F10-4BCB-BD2A-A2226C172FF7}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{44DB346A-5F10-4BCB-BD2A-A2226C172FF7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3FDDCD82-68CA-4A62-86E3-8D8A692B14BC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3FDDCD82-68CA-4A62-86E3-8D8A692B14BC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3FDDCD82-68CA-4A62-86E3-8D8A692B14BC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3FDDCD82-68CA-4A62-86E3-8D8A692B14BC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B7A033FF-F0CF-435F-BF7C-748A41AF7B1C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B7A033FF-F0CF-435F-BF7C-748A41AF7B1C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B7A033FF-F0CF-435F-BF7C-748A41AF7B1C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B7A033FF-F0CF-435F-BF7C-748A41AF7B1C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B1D3221A-9E03-4F44-A29F-9E171594CA57}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B1D3221A-9E03-4F44-A29F-9E171594CA57}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B1D3221A-9E03-4F44-A29F-9E171594CA57}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B1D3221A-9E03-4F44-A29F-9E171594CA57}.Release|Any CPU.Build.0 = Release|Any CPU
+		{90753CF3-C381-4282-A24B-EF42DC442138}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{90753CF3-C381-4282-A24B-EF42DC442138}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{90753CF3-C381-4282-A24B-EF42DC442138}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{90753CF3-C381-4282-A24B-EF42DC442138}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{3FDDCD82-68CA-4A62-86E3-8D8A692B14BC} = {BAE6DF35-EB49-475B-9D8E-7EC3AB5BF4EF}
+		{B7A033FF-F0CF-435F-BF7C-748A41AF7B1C} = {BAE6DF35-EB49-475B-9D8E-7EC3AB5BF4EF}
+		{B1D3221A-9E03-4F44-A29F-9E171594CA57} = {8BAB2186-0D37-44DD-A818-9F57F2ABDD50}
+		{90753CF3-C381-4282-A24B-EF42DC442138} = {8BAB2186-0D37-44DD-A818-9F57F2ABDD50}
 	EndGlobalSection
 EndGlobal

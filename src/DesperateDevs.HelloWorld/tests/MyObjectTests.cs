@@ -1,6 +1,4 @@
-using DesperateDevs.HelloWorld;
-
-namespace Tests;
+namespace DesperateDevs.HelloWorld.Tests;
 
 public class MyObjectTests
 {
