@@ -7,3 +7,6 @@ coverage:
 
 comment:
   layout: "reach, diff, flags, files"
+
+fixes:
+  - "/home/runner/work/::"
