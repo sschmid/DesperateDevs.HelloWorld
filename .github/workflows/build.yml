@@ -54,6 +54,7 @@ jobs:
       - name: "Upload to Codecov"
         uses: codecov/codecov-action@v3
         with:
-          token: ${{ secrets.CODECOV_TOKEN }}
+          token: 123456
           flags: unittests
           fail_ci_if_error: false
+          verbose: true
