@@ -12,7 +12,7 @@ jobs:
       - name: "Download Packages"
         uses: actions/download-artifact@v3
         with:
-          name: Packages
+          name: ${{ github.event.repository.name }} NuGet Packages
 
       - name: "Push to NuGet"
         run: |
