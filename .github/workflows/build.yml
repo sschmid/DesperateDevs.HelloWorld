@@ -40,7 +40,7 @@ jobs:
           name: Packages
           path: dist/NuGet
 
-      - name: "Coverage Report"
+      - name: "Generate Coverage Report"
         run: |
           dotnet tool install -g dotnet-reportgenerator-globaltool
           reportgenerator -reports:"src/**/tests/TestResults/**/coverage.cobertura.xml" -targetdir:"coveragereport" -reporttypes:"Html;Badges"
