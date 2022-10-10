@@ -1,0 +1,26 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <PackageVersion>1.2.0</PackageVersion>
+  </PropertyGroup>
+
+  <PropertyGroup Label="NuGet">
+    <Authors>Simon Schmid</Authors>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageProjectUrl>https://github.com/sschmid/DesperateDevs</PackageProjectUrl>
+    <Company>Desperate Devs</Company>
+    <Description>$(AssemblyName)</Description>
+    <Copyright>Simon Schmid</Copyright>
+    <PackageTags>DesperateDevs, Desperate, Devs</PackageTags>
+    <RepositoryUrl>https://github.com/sschmid/DesperateDevs</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="System.CodeDom" Version="6.0.0" />
+  </ItemGroup>
+
+</Project>
