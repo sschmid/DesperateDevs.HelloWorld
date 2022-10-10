@@ -7,4 +7,10 @@ public class MyObjectTests
     {
         Assert.Equal(42, new MyObject().MyInt);
     }
+
+    [Fact]
+    public void IsMyInt()
+    {
+        Assert.True(new MyObject().IsMyInt(42));
+    }
 }
