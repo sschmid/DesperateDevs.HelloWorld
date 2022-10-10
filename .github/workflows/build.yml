@@ -28,7 +28,7 @@ jobs:
       - name: "Upload Assemblies"
         uses: actions/upload-artifact@v3
         with:
-          name: Assemblies
+          name: ${{ github.event.repository.name }} Assemblies
           path: dist/Assemblies
 
       - name: "Pack"
@@ -37,7 +37,7 @@ jobs:
       - name: "Upload Packages"
         uses: actions/upload-artifact@v3
         with:
-          name: Packages
+          name: ${{ github.event.repository.name }} Packages
           path: dist/NuGet
 
       - name: "Generate Coverage Report"
@@ -48,7 +48,7 @@ jobs:
       - name: "Upload Coverage Report"
         uses: actions/upload-artifact@v3
         with:
-          name: Coverage Report
+          name: ${{ github.event.repository.name }} Coverage Report
           path: coveragereport
 
       - name: "Upload to Codecov"
