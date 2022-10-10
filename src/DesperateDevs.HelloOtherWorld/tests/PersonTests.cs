@@ -1,10 +1,10 @@
 namespace DesperateDevs.HelloOtherWorld.Tests;
 
-public class MyObjectTests
+public class PersonTests
 {
     [Fact]
     public void HasMyInt()
     {
-        Assert.Equal(24, new MyObject().MyInt);
+        Assert.Equal(24, new Person().MyInt);
     }
 }

@@ -1,6 +1,6 @@
 ﻿namespace DesperateDevs.HelloOtherWorld;
 
-public class MyOtherObject
+public class Person
 {
     public int MyInt => 24;
 }
