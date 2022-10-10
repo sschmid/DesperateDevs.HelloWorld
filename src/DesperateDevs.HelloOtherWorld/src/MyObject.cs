@@ -1,4 +1,4 @@
-﻿namespace DesperateDevs.HelloWorld2;
+﻿namespace DesperateDevs.HelloOtherWorld;
 
 public class MyObject
 {

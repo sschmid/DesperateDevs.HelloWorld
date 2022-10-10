@@ -1,4 +1,4 @@
-namespace DesperateDevs.HelloWorld2.Tests;
+namespace DesperateDevs.HelloOtherWorld.Tests;
 
 public class MyObjectTests
 {

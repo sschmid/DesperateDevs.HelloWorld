@@ -5,6 +5,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DesperateDevs.HelloWorld", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DesperateDevs.HelloWorld.Tests", "src\DesperateDevs.HelloWorld\tests\DesperateDevs.HelloWorld.Tests.csproj", "{B7A033FF-F0CF-435F-BF7C-748A41AF7B1C}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DesperateDevs.HelloOtherWorld", "DesperateDevs.HelloOtherWorld", "{EA03FEF5-AEC1-4120-A2AE-945399004BF5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DesperateDevs.HelloOtherWorld", "src\DesperateDevs.HelloOtherWorld\src\DesperateDevs.HelloOtherWorld.csproj", "{C69C4E88-2A60-4027-A36A-48831CD11C42}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DesperateDevs.HelloOtherWorld.Tests", "src\DesperateDevs.HelloOtherWorld\tests\DesperateDevs.HelloOtherWorld.Tests.csproj", "{757291B7-71FA-439C-ACA2-1D520A0B45D1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -19,9 +25,19 @@ Global
 		{B7A033FF-F0CF-435F-BF7C-748A41AF7B1C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B7A033FF-F0CF-435F-BF7C-748A41AF7B1C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B7A033FF-F0CF-435F-BF7C-748A41AF7B1C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C69C4E88-2A60-4027-A36A-48831CD11C42}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C69C4E88-2A60-4027-A36A-48831CD11C42}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C69C4E88-2A60-4027-A36A-48831CD11C42}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C69C4E88-2A60-4027-A36A-48831CD11C42}.Release|Any CPU.Build.0 = Release|Any CPU
+		{757291B7-71FA-439C-ACA2-1D520A0B45D1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{757291B7-71FA-439C-ACA2-1D520A0B45D1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{757291B7-71FA-439C-ACA2-1D520A0B45D1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{757291B7-71FA-439C-ACA2-1D520A0B45D1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{3FDDCD82-68CA-4A62-86E3-8D8A692B14BC} = {BAE6DF35-EB49-475B-9D8E-7EC3AB5BF4EF}
 		{B7A033FF-F0CF-435F-BF7C-748A41AF7B1C} = {BAE6DF35-EB49-475B-9D8E-7EC3AB5BF4EF}
+		{C69C4E88-2A60-4027-A36A-48831CD11C42} = {EA03FEF5-AEC1-4120-A2AE-945399004BF5}
+		{757291B7-71FA-439C-ACA2-1D520A0B45D1} = {EA03FEF5-AEC1-4120-A2AE-945399004BF5}
 	EndGlobalSection
 EndGlobal
