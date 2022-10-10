@@ -3,4 +3,5 @@
 public class MyObject
 {
     public int MyInt => 42;
+    public string MyString => "42";
 }
