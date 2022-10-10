@@ -1,10 +1,10 @@
 flags:
   DesperateDevsHelloWorld:
     paths:
-      - src/DesperateDevs.HelloWorld/src/
+      - src/DesperateDevs.HelloWorld/
   DesperateDevsHelloWorld2:
     paths:
-      - src/DesperateDevs.HelloWorld2/src/
+      - src/DesperateDevs.HelloWorld2/
 
 coverage:
   status:
