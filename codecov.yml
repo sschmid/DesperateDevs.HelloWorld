@@ -1,26 +1,9 @@
-flags:
-  DesperateDevsHelloWorld:
-    paths:
-      - src/DesperateDevs.HelloWorld/
-  DesperateDevsHelloWorld2:
-    paths:
-      - src/DesperateDevs.HelloWorld2/
-
 coverage:
   status:
     project:
       default:
         target: auto
         threshold: 1%
-        flags:
-          - DesperateDevsHelloWorld
-          - DesperateDevsHelloWorld2
-      DesperateDevsHelloWorld:
-        flags:
-          - DesperateDevsHelloWorld
-      DesperateDevsHelloWorld2:
-        flags:
-          - DesperateDevsHelloWorld2
 
 comment:
   layout: "reach, diff, flags, files"
