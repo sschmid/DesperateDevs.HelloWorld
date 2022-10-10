@@ -8,8 +8,5 @@ coverage:
 comment:
   layout: "reach, diff, flags, files"
 
-codecov:
-  disable_default_path_fixes: true
-
 fixes:
   - "/home/runner/work/DesperateDevs.HelloWorld/DesperateDevs.HelloWorld/::"
