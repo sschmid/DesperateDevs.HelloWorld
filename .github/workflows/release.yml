@@ -5,6 +5,8 @@ on: workflow_dispatch
 jobs:
   build:
     uses: sschmid/DotnetGitHubActions/.github/workflows/build.yml@main
+    secrets: inherit
+
   release:
     needs: build
     runs-on: ubuntu-latest
