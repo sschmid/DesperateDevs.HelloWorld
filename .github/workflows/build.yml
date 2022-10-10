@@ -20,10 +20,12 @@ jobs:
         run: dotnet build -c Release
 
       - name: "Test"
+        run: dotnet test -c Release --no-build --collect:"XPlat Code Coverage"
+
+      - name: "Coverage Report"
         run: |
-          dotnet test -c Release --no-build --collect:"XPlat Code Coverage"
           dotnet tool install -g dotnet-reportgenerator-globaltool
-          reportgenerator -reports:"**/coverage.cobertura.xml" -targetdir:"coveragereport" -reporttypes:"Html;Badges"
+          reportgenerator -reports:"src/**/tests/TestResults/**/coverage.cobertura.xml" -targetdir:"coveragereport" -reporttypes:"Html;Badges"
 
       - name: "Publish"
         run: dotnet publish -c Release --no-build -o dist/Assemblies
@@ -37,12 +39,6 @@ jobs:
           name: Coverage Report
           path: coveragereport
 
-      - name: "Upload to Codecov"
-        uses: codecov/codecov-action@v3
-        with:
-          flags: unittests
-          fail_ci_if_error: false
-
       - name: "Upload Assemblies"
         uses: actions/upload-artifact@v3
         with:
@@ -54,3 +50,9 @@ jobs:
         with:
           name: Packages
           path: dist/NuGet
+
+      - name: "Upload to Codecov"
+        uses: codecov/codecov-action@v3
+        with:
+          flags: unittests
+          fail_ci_if_error: true
