@@ -24,9 +24,9 @@ flag_management:
       - type: patch
         target: 75%
   individual_flags:
-    - name: HelloWorld
+    - name: DesperateDevs.HelloWorld
       paths:
-        - src/HelloWorld
+        - src/DesperateDevs.HelloWorld
     - name: DesperateDevs.HelloOtherWorld
       paths:
         - src/DesperateDevs.HelloOtherWorld
