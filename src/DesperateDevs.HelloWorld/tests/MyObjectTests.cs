@@ -25,4 +25,10 @@ public class MyObjectTests
     {
         Assert.False(new MyObject().IsMyInt(0));
     }
+
+    [Fact]
+    public void SaysHi()
+    {
+        Assert.Equal("hi", new MyObject().Say("hi"));
+    }
 }
