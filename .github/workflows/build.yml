@@ -57,3 +57,4 @@ jobs:
           token: ${{ secrets.CODECOV_TOKEN }}
           flags: DesperateDevs.HelloWorld,DesperateDevs.HelloOtherWorld
           fail_ci_if_error: false
+          verbose: true
