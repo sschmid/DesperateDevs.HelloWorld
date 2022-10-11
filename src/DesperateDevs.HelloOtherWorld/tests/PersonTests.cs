@@ -8,12 +8,12 @@ public class PersonTests
         Assert.Equal(24, new Person().MyInt);
     }
 
-    // [Fact]
-    // public void SaysHi()
-    // {
-    //     Assert.Equal("hi", new Person().Say("hi"));
-    // }
-    //
+    [Fact]
+    public void SaysHi()
+    {
+        Assert.Equal("hi", new Person().Say("hi"));
+    }
+
     // [Fact]
     // public void Greets()
     // {
