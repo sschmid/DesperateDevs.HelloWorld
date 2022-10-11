@@ -13,8 +13,5 @@ public class MyObject
             return false;
     }
 
-    public void Say(string message)
-    {
-        Console.WriteLine(message);
-    }
+    public string Say(string message) => message;
 }
