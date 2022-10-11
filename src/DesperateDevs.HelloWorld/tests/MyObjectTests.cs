@@ -31,4 +31,10 @@ public class MyObjectTests
     {
         Assert.Equal("hi", new MyObject().Say("hi"));
     }
+
+    [Fact]
+    public void Greets()
+    {
+        Assert.Equal("hi", new MyObject().Greet("hi"));
+    }
 }
