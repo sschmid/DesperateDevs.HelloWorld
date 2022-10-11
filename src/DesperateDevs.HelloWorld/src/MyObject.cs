@@ -12,4 +12,9 @@ public class MyObject
         else
             return false;
     }
+
+    public void SayHi(int i)
+    {
+        Console.WriteLine("Hello");
+    }
 }
