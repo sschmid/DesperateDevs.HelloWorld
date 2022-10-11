@@ -13,8 +13,8 @@ public class MyObject
             return false;
     }
 
-    public void SayHi(int i)
+    public void Say(string message)
     {
-        Console.WriteLine("Hello");
+        Console.WriteLine(message);
     }
 }
