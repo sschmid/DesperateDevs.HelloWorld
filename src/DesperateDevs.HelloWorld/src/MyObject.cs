@@ -14,4 +14,6 @@ public class MyObject
     }
 
     public string Say(string message) => message;
+
+    public string Greet(string message) => message;
 }
