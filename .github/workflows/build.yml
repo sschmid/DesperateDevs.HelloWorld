@@ -43,7 +43,7 @@ jobs:
       - name: "Generate Coverage Report"
         run: |
           dotnet tool install -g dotnet-reportgenerator-globaltool
-          reportgenerator -reports:"src/**/tests/TestResults/**/coverage.cobertura.xml" -targetdir:"coveragereport" -reporttypes:"Html;Badges"
+          reportgenerator -reports:"src/**/tests/TestResults/**/coverage.cobertura.xml" -targetdir:"coveragereport" -reporttypes:"Html;Badges;lcov"
 
       - name: "Upload Coverage Report"
         uses: actions/upload-artifact@v3
@@ -51,10 +51,8 @@ jobs:
           name: ${{ github.event.repository.name }} Coverage Report
           path: coveragereport
 
-      - name: "Upload to Codecov"
-        uses: codecov/codecov-action@v3.1.1
+      - name: Coveralls
+        uses: coverallsapp/github-action@master
         with:
-          token: ${{ secrets.CODECOV_TOKEN }}
-          flags: DesperateDevs.HelloWorld,DesperateDevs.HelloOtherWorld
-          fail_ci_if_error: false
-          verbose: true
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          path-to-lcov: "coveragereport/lcov.info"
