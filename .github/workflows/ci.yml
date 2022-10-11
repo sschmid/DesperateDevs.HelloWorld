@@ -9,4 +9,3 @@ on:
 jobs:
   build:
     uses: sschmid/DotnetGitHubActions/.github/workflows/build.yml@main
-    secrets: inherit
