@@ -35,6 +35,6 @@ public class MyObjectTests
     [Fact]
     public void Greets()
     {
-        Assert.Equal("hi", new MyObject().Say("hi"));
+        Assert.Equal("hi", new MyObject().Greet("hi"));
     }
 }
