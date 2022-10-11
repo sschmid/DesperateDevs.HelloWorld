@@ -14,9 +14,9 @@ public class PersonTests
         Assert.Equal("hi", new Person().Say("hi"));
     }
 
-    // [Fact]
-    // public void Greets()
-    // {
-    //     Assert.Equal("hi", new Person().Greet("hi"));
-    // }
+    [Fact]
+    public void Greets()
+    {
+        Assert.Equal("hi", new Person().Greet("hi"));
+    }
 }
