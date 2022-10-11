@@ -16,7 +16,7 @@ fixes:
 
 flag_management:
   default_rules:
-    carryforward: true
+    carryforward: false
     statuses:
       - type: project
         target: auto
