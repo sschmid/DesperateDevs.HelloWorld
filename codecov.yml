@@ -23,3 +23,10 @@ flag_management:
         threshold: 1%
       - type: patch
         target: 75%
+  individual_flags:
+    - name: HelloWorld
+      paths:
+        - src/HelloWorld
+    - name: DesperateDevs.HelloOtherWorld
+      paths:
+        - src/DesperateDevs.HelloOtherWorld
