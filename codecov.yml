@@ -1,3 +1,6 @@
+comment:
+  layout: "reach, diff, flags, files"
+
 coverage:
   status:
     project:
@@ -5,8 +8,35 @@ coverage:
         target: auto
         threshold: 1%
 
-comment:
-  layout: "reach, diff, flags, files"
-
 fixes:
   - "/home/runner/work/DesperateDevs.HelloWorld/DesperateDevs.HelloWorld/::"
+
+flag_management:
+  default_rules:
+    carryforward: true
+    statuses:
+      - type: project
+        target: auto
+        threshold: 1%
+      - type: patch
+        target: auto
+        threshold: 1%
+  individual_flags:
+    - name: DesperateDevs.HelloWorld
+      paths:
+        - src/DesperateDevs.HelloWorld
+      carryforward: true
+      statuses:
+        - type: project
+          target: 20%
+        - type: patch
+          target: 100%
+    - name: DesperateDevs.HelloOtherWorld
+      paths:
+        - src/DesperateDevs.HelloOtherWorld
+      carryforward: true
+      statuses:
+        - type: project
+          target: 20%
+        - type: patch
+          target: 100%
