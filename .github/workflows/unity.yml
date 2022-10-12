@@ -1,9 +1,9 @@
-name: Build
+name: Unity
 
 on: workflow_dispatch
 
 jobs:
-  build:
+  install:
     runs-on: ubuntu-latest
     steps:
       - name: "Generate Coverage Report"
