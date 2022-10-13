@@ -1,15 +1,18 @@
-name: Unity
-
-on: workflow_dispatch
-
+name: Acquire activation file
+on:
+  workflow_dispatch: {}
 jobs:
-  install:
+  activation:
+    name: Request manual activation file 🔑
     runs-on: ubuntu-latest
     steps:
-      - name: "Generate Coverage Report"
-        run: |
-          sudo sh -c 'echo "deb https://hub.unity3d.com/linux/repos/deb stable main" > /etc/apt/sources.list.d/unityhub.list'
-          wget -qO - https://hub.unity3d.com/linux/keys/public | sudo apt-key add -
-          apt-get update && apt-get install -y --no-install-recommends \
-            unityhub \
-            && rm -rf /var/lib/apt/lists/*        
+      # Request manual activation file
+      - name: Request manual activation file
+        id: getManualLicenseFile
+        uses: game-ci/unity-request-activation-file@v2
+      # Upload artifact (Unity_v20XX.X.XXXX.alf)
+      - name: Expose as artifact
+        uses: actions/upload-artifact@v2
+        with:
+          name: ${{ steps.getManualLicenseFile.outputs.filePath }}
+          path: ${{ steps.getManualLicenseFile.outputs.filePath }}
