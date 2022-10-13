@@ -1,16 +1,23 @@
 name: Acquire activation file
+
 on:
-  workflow_dispatch: {}
+  workflow_dispatch:
+    inputs:
+      unityVersion:
+        description: "Select Unity version"
+        required: true
+        type: string
+
 jobs:
   activation:
-    name: Request manual activation file 🔑
     runs-on: ubuntu-latest
     steps:
       - name: Request manual activation file
         id: getManualLicenseFile
         uses: game-ci/unity-request-activation-file@v2
         with:
-          unityVersion: ${{ matrix.unityVersion }}
+          unityVersion: ${{ inputs.unityVersion }}
+
       - name: Expose as artifact
         uses: actions/upload-artifact@v2
         with:
